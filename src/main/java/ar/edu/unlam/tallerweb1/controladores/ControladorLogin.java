@@ -19,23 +19,23 @@ public class ControladorLogin {
 	
 	//TP PUNTO 5
 	@RequestMapping(value = "/resultado/{operacion}/{num1}/{num2}", method = RequestMethod.GET)
-	public ModelAndView punto5(@PathVariable char operacion,@PathVariable int num1, @PathVariable int num2){
+	public ModelAndView punto5(@PathVariable String operacion,@PathVariable int num1, @PathVariable int num2){
 		
 		ModelMap model = new ModelMap();
 		
 		int resultado = 0;
 		
 		switch (operacion) {
-		case '+':
+		case "suma":
 			resultado = num1 + num2;
 			break;
-		case '-':
+		case "resta":
 			resultado = num1 - num2;
 			break;
-		case '*':
+		case "multiplicacion":
 			resultado = num1 * num2;
 			break;
-		case '/':
+		case "division":
 			resultado = num1 / num2;
 			break;
 		default:
